@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- Vanilla Temp Control In Place -->
+	<StatDef>
+		<defName>RWHS_TempControl_InPlace_CurrentACPerSecond</defName>
+		<label>Current temp control per second</label>
+		<workerClass>RWHS.StatWorker_TempControl_InPlace_CurrentACPerSecond</workerClass>
+		<description>The amount of degrees this building is controlling in the room per second.</description>
+		<category>RWHS_HeatStatistics</category>
+		<defaultBaseValue>0</defaultBaseValue>
+		<toStringStyle>FloatThree</toStringStyle>
+		<displayPriorityInCategory>3</displayPriorityInCategory>
+		<showIfUndefined>false</showIfUndefined>
+		<showIfModsLoaded>
+			<li>helldragger.rimworldheatstatistics</li>
+		</showIfModsLoaded>
+	</StatDef>
+	<StatDef>
+		<defName>RWHS_TempControl_InPlace_MaxACPerSecond</defName>
+		<label>Max temp control per second</label>
+		<workerClass>RWHS.StatWorker_TempControl_InPlace_MaxACPerSecond</workerClass>
+		<description>The maximum amount of degrees this building can control in the room per second.</description>
+		<category>RWHS_HeatStatistics</category>
+		<defaultBaseValue>0</defaultBaseValue>
+		<toStringStyle>FloatThree</toStringStyle>
+		<displayPriorityInCategory>3</displayPriorityInCategory>
+		<showIfUndefined>false</showIfUndefined>
+		<showIfModsLoaded>
+			<li>helldragger.rimworldheatstatistics</li>
+		</showIfModsLoaded>
+	</StatDef>
+	<!-- Vanilla Temp Control Room Exchange -->
+	<StatDef>
+		<defName>RWHS_TempControl_RoomExchange_CurrentACPerSecond</defName>
+		<label>Current cooling per second</label>
+		<workerClass>RWHS.StatWorker_TempControl_RoomExchange_CurrentACPerSecond</workerClass>
+		<description>The amount of degrees this building is controlling from the room on its cold side per second.</description>
+		<category>RWHS_HeatStatistics</category>
+		<defaultBaseValue>0</defaultBaseValue>
+		<toStringStyle>FloatThree</toStringStyle>
+		<displayPriorityInCategory>3</displayPriorityInCategory>
+		<showIfUndefined>false</showIfUndefined>
+		<showIfModsLoaded>
+			<li>helldragger.rimworldheatstatistics</li>
+		</showIfModsLoaded>
+	</StatDef>
+	<StatDef>
+		<defName>RWHS_TempControl_RoomExchange_MaxACPerSecond</defName>
+		<label>Max cooling per second</label>
+		<workerClass>RWHS.StatWorker_TempControl_RoomExchange_MaxACPerSecond</workerClass>
+		<description>The maximum amount of degrees this building can control from the room on its cold side per second.</description>
+		<category>RWHS_HeatStatistics</category>
+		<defaultBaseValue>0</defaultBaseValue>
+		<toStringStyle>FloatThree</toStringStyle>
+		<displayPriorityInCategory>3</displayPriorityInCategory>
+		<showIfUndefined>false</showIfUndefined>
+		<showIfModsLoaded>
+			<li>helldragger.rimworldheatstatistics</li>
+		</showIfModsLoaded>
+	</StatDef>
+	<!-- Heat Pusher -->
+	<StatDef>
+		<defName>RWHS_HeatPusher_PushedPerSecond</defName>
+		<label>Heat pushed when active</label>
+		<workerClass>RWHS.StatWorker_HeatPusher_PushedPerSecond</workerClass>
+		<description>The current amount of degrees this building will push into the room per second when active.\n\nA heat pusher will be active when the ambient temp is between it's min and max working temperature.</description>
+		<category>RWHS_HeatStatistics</category>
+		<defaultBaseValue>0</defaultBaseValue>
+		<toStringStyle>FloatThree</toStringStyle>
+		<displayPriorityInCategory>3</displayPriorityInCategory>
+		<showIfUndefined>false</showIfUndefined>
+		<showIfModsLoaded>
+			<li>helldragger.rimworldheatstatistics</li>
+		</showIfModsLoaded>
+	</StatDef>
+	<StatDef>
+		<defName>RWHS_HeatPusher_MinTemp</defName>
+		<label>Min working temperature</label>
+		<workerClass>RWHS.StatWorker_HeatPusher_MinTemperature</workerClass>
+		<description>The minimum temperature needed for the building to work.</description>
+		<category>RWHS_HeatStatistics</category>
+		<defaultBaseValue>0</defaultBaseValue>
+		<toStringStyle>FloatThree</toStringStyle>
+		<displayPriorityInCategory>3</displayPriorityInCategory>
+		<showIfUndefined>false</showIfUndefined>
+		<showIfModsLoaded>
+			<li>helldragger.rimworldheatstatistics</li>
+		</showIfModsLoaded>
+	</StatDef>
+	<StatDef>
+		<defName>RWHS_HeatPusher_MaxTemp</defName>
+		<label>Max working temperature</label>
+		<workerClass>RWHS.StatWorker_HeatPusher_MaxTemperature</workerClass>
+		<description>The maximum temperature needed for the building to work.</description>
+		<category>RWHS_HeatStatistics</category>
+		<defaultBaseValue>0</defaultBaseValue>
+		<toStringStyle>FloatThree</toStringStyle>
+		<displayPriorityInCategory>3</displayPriorityInCategory>
+		<showIfUndefined>false</showIfUndefined>
+		<showIfModsLoaded>
+			<li>helldragger.rimworldheatstatistics</li>
+		</showIfModsLoaded>
+	</StatDef>
+	<!-- STEAM GENERATORS -->
+	<StatDef>
+		<defName>RWHS_PowerPlantSteam_PushedPerSecond</defName>
+		<label>Max heat pushed per second</label>
+		<workerClass>RWHS.StatWorker_PowerPlantSteam_PushedPerSecond</workerClass>
+		<description>The current amount of degrees this building will push into the room per second during a geyser spray.\n\nThis statistic is the maximum a generator can output during consecutive long sprays.</description>
+		<category>RWHS_HeatStatistics</category>
+		<defaultBaseValue>0</defaultBaseValue>
+		<toStringStyle>FloatThree</toStringStyle>
+		<displayPriorityInCategory>3</displayPriorityInCategory>
+		<showIfUndefined>false</showIfUndefined>
+		<showIfModsLoaded>
+			<li>helldragger.rimworldheatstatistics</li>
+		</showIfModsLoaded>
+	</StatDef>
+
+</Defs>
