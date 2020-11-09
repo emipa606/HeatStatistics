@@ -1,4 +1,4 @@
-using RimWorld;
+﻿using RimWorld;
 using UnityEngine;
 using Verse;
 
@@ -23,11 +23,7 @@ namespace RWHS
             float cooledRoomTemp = intVec3_1.GetTemperature(tempController.Map);
             float extRoomTemp = intVec3_2.GetTemperature(tempController.Map);
             float efficiencyLossPerDegree = 1.0f / 130.0f; // SOS2 internal value, means loss of efficiency for each degree above targettemp, lose 50% at 65C above targetTemp, 100% at 130+
-            float sidesTempGradient = (extRoomTemp - cooledRoomTemp);
-            if (extRoomTemp - 40f > sidesTempGradient)
-            {
-                sidesTempGradient = extRoomTemp - 40f;
-            }
+            float sidesTempGradient = extRoomTemp - (cooledRoomTemp < 40 ? cooledRoomTemp : 40);
             float efficiency = (1f - sidesTempGradient * efficiencyLossPerDegree);
             return efficiency;
         }
