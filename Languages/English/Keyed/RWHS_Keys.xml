@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 	<!-- Heat Pushing -->
 
@@ -57,10 +57,15 @@
 	<StatsReport_RWHS_Unit_TargetTemperature>{0} C</StatsReport_RWHS_Unit_TargetTemperature>
 
 	<StatsReport_RWHS_SidesTempGradient>Temperature difference between both sides</StatsReport_RWHS_SidesTempGradient>
-	<StatsReport_RWHS_Equation_SidesTempGradient>cold - hot</StatsReport_RWHS_Equation_SidesTempGradient>
+	<StatsReport_RWHS_Equation_SidesTempGradient>hot - cold</StatsReport_RWHS_Equation_SidesTempGradient>
 	<StatsReport_RWHS_Calculus_SidesTempGradient>{0} - {1}</StatsReport_RWHS_Calculus_SidesTempGradient>
 	<StatsReport_RWHS_Unit_SidesTempGradient>{0} C</StatsReport_RWHS_Unit_SidesTempGradient>
 
+	<StatsReport_RWHS_TempOverLimit>Degrees over 40C</StatsReport_RWHS_TempOverLimit>
+	<StatsReport_RWHS_Equation_TempOverLimit>hot - 40</StatsReport_RWHS_Equation_TempOverLimit>
+	<StatsReport_RWHS_Calculus_TempOverLimit>{0} - 40</StatsReport_RWHS_Calculus_TempOverLimit>
+	<StatsReport_RWHS_Unit_TempOverLimit>{0} C</StatsReport_RWHS_Unit_TempOverLimit>
+	
 	<StatsReport_RWHS_TargetTempDiff>Difference between target and actual temperature</StatsReport_RWHS_TargetTempDiff>
 	<StatsReport_RWHS_Equation_TargetTempDiff>targetTemp - roomTemp</StatsReport_RWHS_Equation_TargetTempDiff>
 	<StatsReport_RWHS_Calculus_TargetTempDiff>{0} - {1}</StatsReport_RWHS_Calculus_TargetTempDiff>
@@ -80,8 +85,8 @@
 	<StatsReport_RWHS_Unit_EfficiencyLossPerDegree>{0} C^-1</StatsReport_RWHS_Unit_EfficiencyLossPerDegree>
 
 	<StatsReport_RWHS_RelativeEfficiency>Efficiency</StatsReport_RWHS_RelativeEfficiency>
-	<StatsReport_RWHS_Equation_RelativeEfficiency>1 - sidesTempDiff * efficiencyLossPerDegree</StatsReport_RWHS_Equation_RelativeEfficiency>
-	<StatsReport_RWHS_Calculus_RelativeEfficiency>1 - {0} * {1}</StatsReport_RWHS_Calculus_RelativeEfficiency>
+	<StatsReport_RWHS_Equation_RelativeEfficiency>1 - max(sidesTempDiff, tempOverLimit) * efficiency</StatsReport_RWHS_Equation_RelativeEfficiency>
+	<StatsReport_RWHS_Calculus_RelativeEfficiency>1 - max({0}, {1}) * {2}</StatsReport_RWHS_Calculus_RelativeEfficiency>
 	<StatsReport_RWHS_Unit_RelativeEfficiency>{0} %</StatsReport_RWHS_Unit_RelativeEfficiency>
 
 	<StatsReport_RWHS_LerpEfficiency>Efficiency</StatsReport_RWHS_LerpEfficiency>
