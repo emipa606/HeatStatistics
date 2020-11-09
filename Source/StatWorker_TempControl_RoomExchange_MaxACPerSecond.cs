@@ -63,11 +63,10 @@ namespace RWHS
             float energyPerSecond = tempControl.Props.energyPerSecond; // the power of the radiator
             float roomSurface = intVec3_1.GetRoomGroup(tempController.Map).CellCount;
             float coolingConversionRate = 4.16666651f; // Celsius cooled per Joules*Second*Meter^2  conversion rate
-            float sidesTempGradient = (extRoomTemp - cooledRoomTemp);
-            float tempOverLimit = extRoomTemp - 40;
-            float tempHigher = sidesTempGradient > tempOverLimit ? sidesTempGradient : tempOverLimit;
-            float efficiency = (1f - tempHigher * efficiencyLossPerDegree); // a negative value indicates heat generation
+            float sidesTempGradient = extRoomTemp - (cooledRoomTemp < 40 ? cooledRoomTemp : 40);
+            float efficiency = (1f - sidesTempGradient * efficiencyLossPerDegree); // a negative value indicates heat generation
             float maxACPerSecond = energyPerSecond * efficiency / roomSurface * coolingConversionRate; // max cooling power possible, positive value indicates heat generation
+
             SEB seb = new SEB("StatsReport_RWHS");
             seb.Simple("CooledRoomTemp", cooledRoomTemp);
             seb.Simple("ExteriorRoomTemp", extRoomTemp);
@@ -76,8 +75,7 @@ namespace RWHS
             seb.Simple("CooledRoomSurface", roomSurface);
             seb.Simple("ACConversionRate", coolingConversionRate);
             seb.Full("SidesTempGradient", sidesTempGradient, extRoomTemp, cooledRoomTemp);
-            seb.Full("TempOverLimit", tempOverLimit, extRoomTemp);
-            seb.Full("RelativeEfficiency", efficiency * 100, sidesTempGradient, tempOverLimit, efficiencyLossPerDegree);
+            seb.Full("RelativeEfficiency", efficiency * 100, sidesTempGradient, efficiencyLossPerDegree);
             seb.Full("MaxACPerSecond", maxACPerSecond, energyPerSecond, efficiency, roomSurface, coolingConversionRate);
 
             return seb.ToString();
