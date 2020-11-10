@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 	<!-- Heat Pushing -->
 
@@ -56,9 +56,9 @@
 	<StatsReport_RWHS_TargetTemperature>Target temperature</StatsReport_RWHS_TargetTemperature>
 	<StatsReport_RWHS_Unit_TargetTemperature>{0} C</StatsReport_RWHS_Unit_TargetTemperature>
 
-	<StatsReport_RWHS_SidesTempGradient>Temperature difference between both sides</StatsReport_RWHS_SidesTempGradient>
-	<StatsReport_RWHS_Equation_SidesTempGradient>cold - hot</StatsReport_RWHS_Equation_SidesTempGradient>
-	<StatsReport_RWHS_Calculus_SidesTempGradient>{0} - {1}</StatsReport_RWHS_Calculus_SidesTempGradient>
+	<StatsReport_RWHS_SidesTempGradient>Temperature difference between both sides or over 40C</StatsReport_RWHS_SidesTempGradient>
+	<StatsReport_RWHS_Equation_SidesTempGradient>hot - min(cold,40)</StatsReport_RWHS_Equation_SidesTempGradient>
+	<StatsReport_RWHS_Calculus_SidesTempGradient>{0} - min({1},40)</StatsReport_RWHS_Calculus_SidesTempGradient>
 	<StatsReport_RWHS_Unit_SidesTempGradient>{0} C</StatsReport_RWHS_Unit_SidesTempGradient>
 
 	<StatsReport_RWHS_TargetTempDiff>Difference between target and actual temperature</StatsReport_RWHS_TargetTempDiff>
