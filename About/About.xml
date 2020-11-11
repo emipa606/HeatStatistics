@@ -3,7 +3,8 @@
 	<author>Helldragger</author>
 	<packageId>helldragger.rimworldheatstatistics</packageId>
 	<supportedVersions>
-		<li>1.1</li>
+    <li>1.1</li>
+    <li>1.2</li>
 	</supportedVersions>
 	<description>
 Unsure how to set them up efficiently your megabase AC system to save electricity?
