@@ -1,98 +1,69 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-	<!-- Heat Pushing -->
-
-	<StatsReport_RWHS_MaxHeatPushed>Max heat pushed</StatsReport_RWHS_MaxHeatPushed>
-	<StatsReport_RWHS_Unit_MaxHeatPushed>{0} C.m^2</StatsReport_RWHS_Unit_MaxHeatPushed>
-
-	<StatsReport_RWHS_HeatPushTickInterval>Heat push tick interval</StatsReport_RWHS_HeatPushTickInterval>
-	<StatsReport_RWHS_Unit_HeatPushTickInterval>{0} tick(s)</StatsReport_RWHS_Unit_HeatPushTickInterval>
-
-	<StatsReport_RWHS_HeatPushedPerSecond>Max heat pushed per second</StatsReport_RWHS_HeatPushedPerSecond>
-	<StatsReport_RWHS_Equation_HeatPushedPerSecond>maxHeatPushed / HeatPushTickInterval * 60</StatsReport_RWHS_Equation_HeatPushedPerSecond>
-	<StatsReport_RWHS_Calculus_HeatPushedPerSecond>{0} / {1} * 60</StatsReport_RWHS_Calculus_HeatPushedPerSecond>
-	<StatsReport_RWHS_Unit_HeatPushedPerSecond>{0} C.s^-1.m^2</StatsReport_RWHS_Unit_HeatPushedPerSecond>
-
-	<StatsReport_RWHS_HeatOutputPerSecond>Max heat output per second</StatsReport_RWHS_HeatOutputPerSecond>
-	<StatsReport_RWHS_Equation_HeatOutputPerSecond>maxHeatPushedPerSecond / roomSurface </StatsReport_RWHS_Equation_HeatOutputPerSecond>
-	<StatsReport_RWHS_Calculus_HeatOutputPerSecond>{0} / {1}</StatsReport_RWHS_Calculus_HeatOutputPerSecond>
-	<StatsReport_RWHS_Unit_HeatOutputPerSecond>{0} C.s^-1</StatsReport_RWHS_Unit_HeatOutputPerSecond>
-	
-	<!-- Air Conditionning -->
-	
-	<StatsReport_RWHS_EnergyPerSecond>Convertible energy per second</StatsReport_RWHS_EnergyPerSecond>
-	<StatsReport_RWHS_Unit_EnergyPerSecond>{0} J.s^-1</StatsReport_RWHS_Unit_EnergyPerSecond>
-
-	<StatsReport_RWHS_ACConversionRate>AC conversion rate</StatsReport_RWHS_ACConversionRate>
-	<StatsReport_RWHS_Unit_ACConversionRate>{0} C.m^2.J^-1.s^-1</StatsReport_RWHS_Unit_ACConversionRate>
-
-	<StatsReport_RWHS_MaxACPerSecond>Maximum AC power per second</StatsReport_RWHS_MaxACPerSecond>
-	<StatsReport_RWHS_Equation_MaxACPerSecond>energyPerSecond * efficiency / roomSurface * ACConversionRate</StatsReport_RWHS_Equation_MaxACPerSecond>
-	<StatsReport_RWHS_Calculus_MaxACPerSecond>{0} * {1} / {2} * {3}</StatsReport_RWHS_Calculus_MaxACPerSecond>
-	<StatsReport_RWHS_Unit_MaxACPerSecond>{0} C.s^-1</StatsReport_RWHS_Unit_MaxACPerSecond>
-
-	<StatsReport_RWHS_ActualHeaterACPerSecond>Current AC per second</StatsReport_RWHS_ActualHeaterACPerSecond>
-	<StatsReport_RWHS_Equation_ActualHeaterACPerSecond>max( min( targetTempDiff, maxAC ), 0 ) </StatsReport_RWHS_Equation_ActualHeaterACPerSecond>
-	<StatsReport_RWHS_Calculus_ActualHeaterACPerSecond>max( min( {0}, {1}), 0 ) </StatsReport_RWHS_Calculus_ActualHeaterACPerSecond>
-	<StatsReport_RWHS_Unit_ActualHeaterACPerSecond>{0} C.s^-1</StatsReport_RWHS_Unit_ActualHeaterACPerSecond>
-
-	<StatsReport_RWHS_ActualCoolerACPerSecond>Current AC per second</StatsReport_RWHS_ActualCoolerACPerSecond>
-	<StatsReport_RWHS_Equation_ActualCoolerACPerSecond>min( max( targetTempDiff, maxAC ), 0 ) </StatsReport_RWHS_Equation_ActualCoolerACPerSecond>
-	<StatsReport_RWHS_Calculus_ActualCoolerACPerSecond>min( max( {0}, {1}), 0 ) </StatsReport_RWHS_Calculus_ActualCoolerACPerSecond>
-	<StatsReport_RWHS_Unit_ActualCoolerACPerSecond>{0} C.s^-1</StatsReport_RWHS_Unit_ActualCoolerACPerSecond>
-	
-	<!-- Temperature -->
-	
-	
-	<StatsReport_RWHS_CooledRoomTemp>Temperature on the cool side</StatsReport_RWHS_CooledRoomTemp>
-	<StatsReport_RWHS_Unit_CooledRoomTemp>{0} C</StatsReport_RWHS_Unit_CooledRoomTemp>
-
-	<StatsReport_RWHS_ExteriorRoomTemp>Temperature on the hot side</StatsReport_RWHS_ExteriorRoomTemp>
-	<StatsReport_RWHS_Unit_ExteriorRoomTemp>{0} C</StatsReport_RWHS_Unit_ExteriorRoomTemp>
-
-	<StatsReport_RWHS_AmbientRoomTemp>Ambient Temperature</StatsReport_RWHS_AmbientRoomTemp>
-	<StatsReport_RWHS_Unit_AmbientRoomTemp>{0} C</StatsReport_RWHS_Unit_AmbientRoomTemp>
-
-	<StatsReport_RWHS_TargetTemperature>Target temperature</StatsReport_RWHS_TargetTemperature>
-	<StatsReport_RWHS_Unit_TargetTemperature>{0} C</StatsReport_RWHS_Unit_TargetTemperature>
-
-	<StatsReport_RWHS_SidesTempGradient>Temperature difference between both sides or over 40C</StatsReport_RWHS_SidesTempGradient>
-	<StatsReport_RWHS_Equation_SidesTempGradient>hot - min(cold,40)</StatsReport_RWHS_Equation_SidesTempGradient>
-	<StatsReport_RWHS_Calculus_SidesTempGradient>{0} - min({1},40)</StatsReport_RWHS_Calculus_SidesTempGradient>
-	<StatsReport_RWHS_Unit_SidesTempGradient>{0} C</StatsReport_RWHS_Unit_SidesTempGradient>
-
-	<StatsReport_RWHS_TargetTempDiff>Difference between target and actual temperature</StatsReport_RWHS_TargetTempDiff>
-	<StatsReport_RWHS_Equation_TargetTempDiff>targetTemp - roomTemp</StatsReport_RWHS_Equation_TargetTempDiff>
-	<StatsReport_RWHS_Calculus_TargetTempDiff>{0} - {1}</StatsReport_RWHS_Calculus_TargetTempDiff>
-	<StatsReport_RWHS_Unit_TargetTempDiff>{0} C</StatsReport_RWHS_Unit_TargetTempDiff>
-
-	<!-- Room surface -->
-
-	<StatsReport_RWHS_CooledRoomSurface>Cold side room surface</StatsReport_RWHS_CooledRoomSurface>
-	<StatsReport_RWHS_Unit_CooledRoomSurface>{0} m^2</StatsReport_RWHS_Unit_CooledRoomSurface>
-	
-	<StatsReport_RWHS_RoomSurface>Room surface</StatsReport_RWHS_RoomSurface>
-	<StatsReport_RWHS_Unit_RoomSurface>{0} m^2</StatsReport_RWHS_Unit_RoomSurface>
-	
-	<!-- Efficiency -->
-
-	<StatsReport_RWHS_EfficiencyLossPerDegree>Cooler efficiency modifier</StatsReport_RWHS_EfficiencyLossPerDegree>
-	<StatsReport_RWHS_Unit_EfficiencyLossPerDegree>{0} C^-1</StatsReport_RWHS_Unit_EfficiencyLossPerDegree>
-
-	<StatsReport_RWHS_RelativeEfficiency>Efficiency</StatsReport_RWHS_RelativeEfficiency>
-	<StatsReport_RWHS_Equation_RelativeEfficiency>1 - sidesTempDiff * efficiencyLossPerDegree</StatsReport_RWHS_Equation_RelativeEfficiency>
-	<StatsReport_RWHS_Calculus_RelativeEfficiency>1 - {0} * {1}</StatsReport_RWHS_Calculus_RelativeEfficiency>
-	<StatsReport_RWHS_Unit_RelativeEfficiency>{0} %</StatsReport_RWHS_Unit_RelativeEfficiency>
-
-	<StatsReport_RWHS_LerpEfficiency>Efficiency</StatsReport_RWHS_LerpEfficiency>
-	<StatsReport_RWHS_Equation_LerpEfficiency>1 - min(max((roomTemp - minTemp) / (maxTemp-minTemp), 0), 1)</StatsReport_RWHS_Equation_LerpEfficiency>
-	<StatsReport_RWHS_Calculus_LerpEfficiency>1 - min(max(({0} - {1}) / ({2}-{1}), 0), 1)</StatsReport_RWHS_Calculus_LerpEfficiency>
-	<StatsReport_RWHS_Unit_LerpEfficiency>{0} %</StatsReport_RWHS_Unit_LerpEfficiency>
-	
-	<!-- Generic units -->
-	<StatsReport_RWHS_Unit_Temperature>{0} C</StatsReport_RWHS_Unit_Temperature>
-	<StatsReport_RWHS_Unit_TemperaturePerSecond>{0} C.s^-1</StatsReport_RWHS_Unit_TemperaturePerSecond>
-
-
-
+  <!-- Heat Pushing -->
+  <StatsReport_RWHS_MaxHeatPushed>Max heat pushed</StatsReport_RWHS_MaxHeatPushed>
+  <StatsReport_RWHS_Unit_MaxHeatPushed>{0} C.m^2</StatsReport_RWHS_Unit_MaxHeatPushed>
+  <StatsReport_RWHS_HeatPushTickInterval>Heat push tick interval</StatsReport_RWHS_HeatPushTickInterval>
+  <StatsReport_RWHS_Unit_HeatPushTickInterval>{0} tick(s)</StatsReport_RWHS_Unit_HeatPushTickInterval>
+  <StatsReport_RWHS_HeatPushedPerSecond>Max heat pushed per second</StatsReport_RWHS_HeatPushedPerSecond>
+  <StatsReport_RWHS_Equation_HeatPushedPerSecond>maxHeatPushed / HeatPushTickInterval * 60</StatsReport_RWHS_Equation_HeatPushedPerSecond>
+  <StatsReport_RWHS_Calculus_HeatPushedPerSecond>{0} / {1} * 60</StatsReport_RWHS_Calculus_HeatPushedPerSecond>
+  <StatsReport_RWHS_Unit_HeatPushedPerSecond>{0} C.s^-1.m^2</StatsReport_RWHS_Unit_HeatPushedPerSecond>
+  <StatsReport_RWHS_HeatOutputPerSecond>Max heat output per second</StatsReport_RWHS_HeatOutputPerSecond>
+  <StatsReport_RWHS_Equation_HeatOutputPerSecond>maxHeatPushedPerSecond / roomSurface </StatsReport_RWHS_Equation_HeatOutputPerSecond>
+  <StatsReport_RWHS_Calculus_HeatOutputPerSecond>{0} / {1}</StatsReport_RWHS_Calculus_HeatOutputPerSecond>
+  <StatsReport_RWHS_Unit_HeatOutputPerSecond>{0} C.s^-1</StatsReport_RWHS_Unit_HeatOutputPerSecond>
+  <!-- Air Conditionning -->
+  <StatsReport_RWHS_EnergyPerSecond>Convertible energy per second</StatsReport_RWHS_EnergyPerSecond>
+  <StatsReport_RWHS_Unit_EnergyPerSecond>{0} J.s^-1</StatsReport_RWHS_Unit_EnergyPerSecond>
+  <StatsReport_RWHS_ACConversionRate>AC conversion rate</StatsReport_RWHS_ACConversionRate>
+  <StatsReport_RWHS_Unit_ACConversionRate>{0} C.m^2.J^-1.s^-1</StatsReport_RWHS_Unit_ACConversionRate>
+  <StatsReport_RWHS_MaxACPerSecond>Maximum AC power per second</StatsReport_RWHS_MaxACPerSecond>
+  <StatsReport_RWHS_Equation_MaxACPerSecond>energyPerSecond * efficiency / roomSurface * ACConversionRate</StatsReport_RWHS_Equation_MaxACPerSecond>
+  <StatsReport_RWHS_Calculus_MaxACPerSecond>{0} * {1} / {2} * {3}</StatsReport_RWHS_Calculus_MaxACPerSecond>
+  <StatsReport_RWHS_Unit_MaxACPerSecond>{0} C.s^-1</StatsReport_RWHS_Unit_MaxACPerSecond>
+  <StatsReport_RWHS_ActualHeaterACPerSecond>Current AC per second</StatsReport_RWHS_ActualHeaterACPerSecond>
+  <StatsReport_RWHS_Equation_ActualHeaterACPerSecond>max( min( targetTempDiff, maxAC ), 0 ) </StatsReport_RWHS_Equation_ActualHeaterACPerSecond>
+  <StatsReport_RWHS_Calculus_ActualHeaterACPerSecond>max( min( {0}, {1}), 0 ) </StatsReport_RWHS_Calculus_ActualHeaterACPerSecond>
+  <StatsReport_RWHS_Unit_ActualHeaterACPerSecond>{0} C.s^-1</StatsReport_RWHS_Unit_ActualHeaterACPerSecond>
+  <StatsReport_RWHS_ActualCoolerACPerSecond>Current AC per second</StatsReport_RWHS_ActualCoolerACPerSecond>
+  <StatsReport_RWHS_Equation_ActualCoolerACPerSecond>min( max( targetTempDiff, maxAC ), 0 ) </StatsReport_RWHS_Equation_ActualCoolerACPerSecond>
+  <StatsReport_RWHS_Calculus_ActualCoolerACPerSecond>min( max( {0}, {1}), 0 ) </StatsReport_RWHS_Calculus_ActualCoolerACPerSecond>
+  <StatsReport_RWHS_Unit_ActualCoolerACPerSecond>{0} C.s^-1</StatsReport_RWHS_Unit_ActualCoolerACPerSecond>
+  <!-- Temperature -->
+  <StatsReport_RWHS_CooledRoomTemp>Temperature on the cool side</StatsReport_RWHS_CooledRoomTemp>
+  <StatsReport_RWHS_Unit_CooledRoomTemp>{0} C</StatsReport_RWHS_Unit_CooledRoomTemp>
+  <StatsReport_RWHS_ExteriorRoomTemp>Temperature on the hot side</StatsReport_RWHS_ExteriorRoomTemp>
+  <StatsReport_RWHS_Unit_ExteriorRoomTemp>{0} C</StatsReport_RWHS_Unit_ExteriorRoomTemp>
+  <StatsReport_RWHS_AmbientRoomTemp>Ambient Temperature</StatsReport_RWHS_AmbientRoomTemp>
+  <StatsReport_RWHS_Unit_AmbientRoomTemp>{0} C</StatsReport_RWHS_Unit_AmbientRoomTemp>
+  <StatsReport_RWHS_TargetTemperature>Target temperature</StatsReport_RWHS_TargetTemperature>
+  <StatsReport_RWHS_Unit_TargetTemperature>{0} C</StatsReport_RWHS_Unit_TargetTemperature>
+  <StatsReport_RWHS_SidesTempGradient>Temperature difference between both sides or over 40C</StatsReport_RWHS_SidesTempGradient>
+  <StatsReport_RWHS_Equation_SidesTempGradient>hot - min(cold,40)</StatsReport_RWHS_Equation_SidesTempGradient>
+  <StatsReport_RWHS_Calculus_SidesTempGradient>{0} - min({1},40)</StatsReport_RWHS_Calculus_SidesTempGradient>
+  <StatsReport_RWHS_Unit_SidesTempGradient>{0} C</StatsReport_RWHS_Unit_SidesTempGradient>
+  <StatsReport_RWHS_TargetTempDiff>Difference between target and actual temperature</StatsReport_RWHS_TargetTempDiff>
+  <StatsReport_RWHS_Equation_TargetTempDiff>targetTemp - roomTemp</StatsReport_RWHS_Equation_TargetTempDiff>
+  <StatsReport_RWHS_Calculus_TargetTempDiff>{0} - {1}</StatsReport_RWHS_Calculus_TargetTempDiff>
+  <StatsReport_RWHS_Unit_TargetTempDiff>{0} C</StatsReport_RWHS_Unit_TargetTempDiff>
+  <!-- Room surface -->
+  <StatsReport_RWHS_CooledRoomSurface>Cold side room surface</StatsReport_RWHS_CooledRoomSurface>
+  <StatsReport_RWHS_Unit_CooledRoomSurface>{0} m^2</StatsReport_RWHS_Unit_CooledRoomSurface>
+  <StatsReport_RWHS_RoomSurface>Room surface</StatsReport_RWHS_RoomSurface>
+  <StatsReport_RWHS_Unit_RoomSurface>{0} m^2</StatsReport_RWHS_Unit_RoomSurface>
+  <!-- Efficiency -->
+  <StatsReport_RWHS_EfficiencyLossPerDegree>Cooler efficiency modifier</StatsReport_RWHS_EfficiencyLossPerDegree>
+  <StatsReport_RWHS_Unit_EfficiencyLossPerDegree>{0} C^-1</StatsReport_RWHS_Unit_EfficiencyLossPerDegree>
+  <StatsReport_RWHS_RelativeEfficiency>Efficiency</StatsReport_RWHS_RelativeEfficiency>
+  <StatsReport_RWHS_Equation_RelativeEfficiency>1 - sidesTempDiff * efficiencyLossPerDegree</StatsReport_RWHS_Equation_RelativeEfficiency>
+  <StatsReport_RWHS_Calculus_RelativeEfficiency>1 - {0} * {1}</StatsReport_RWHS_Calculus_RelativeEfficiency>
+  <StatsReport_RWHS_Unit_RelativeEfficiency>{0} %</StatsReport_RWHS_Unit_RelativeEfficiency>
+  <StatsReport_RWHS_LerpEfficiency>Efficiency</StatsReport_RWHS_LerpEfficiency>
+  <StatsReport_RWHS_Equation_LerpEfficiency>1 - min(max((roomTemp - minTemp) / (maxTemp-minTemp), 0), 1)</StatsReport_RWHS_Equation_LerpEfficiency>
+  <StatsReport_RWHS_Calculus_LerpEfficiency>1 - min(max(({0} - {1}) / ({2}-{1}), 0), 1)</StatsReport_RWHS_Calculus_LerpEfficiency>
+  <StatsReport_RWHS_Unit_LerpEfficiency>{0} %</StatsReport_RWHS_Unit_LerpEfficiency>
+  <!-- Generic units -->
+  <StatsReport_RWHS_Unit_Temperature>{0} C</StatsReport_RWHS_Unit_Temperature>
+  <StatsReport_RWHS_Unit_TemperaturePerSecond>{0} C.s^-1</StatsReport_RWHS_Unit_TemperaturePerSecond>
 </LanguageData>

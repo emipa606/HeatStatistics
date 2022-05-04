@@ -1,65 +1,64 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Patch>
-	<!-- Add to Between Rooms Temp Control (COOLERS) -->
-	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/ThingDef[not(thingClass="Building_Heater")]/comps/li[@Class="CompProperties_TempControl"]/../../statBases</xpath>
-		<value>
-			<RWHS_TempControl_RoomExchange_CurrentACPerSecond>0</RWHS_TempControl_RoomExchange_CurrentACPerSecond>
-		</value>
-	</Operation>
-	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/ThingDef[not(thingClass="Building_Heater")]/comps/li[@Class="CompProperties_TempControl"]/../../statBases</xpath>
-		<value>
-			<RWHS_TempControl_RoomExchange_MaxACPerSecond>0</RWHS_TempControl_RoomExchange_MaxACPerSecond>
-		</value>
-	</Operation>
-	<!-- Add to In-place Temp Control (HEATERS) -->
-	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/ThingDef[thingClass="Building_Heater"]/statBases</xpath>
-		<value>
-			<RWHS_TempControl_InPlace_CurrentACPerSecond>0</RWHS_TempControl_InPlace_CurrentACPerSecond>
-		</value>
-	</Operation>
-	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/ThingDef[thingClass="Building_Heater"]/statBases</xpath>
-		<value>
-			<RWHS_TempControl_InPlace_MaxACPerSecond>0</RWHS_TempControl_InPlace_MaxACPerSecond>
-	</value>
-	</Operation>
-	<!-- Add to Heat Pushers (PASSIVE COOLER / CAMPFIRE) -->
-	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/ThingDef/comps/li[@Class="CompProperties_HeatPusher" and heatPerSecond]/../../statBases</xpath>
-		<value>
-			<RWHS_HeatPusher_PushedPerSecond>0</RWHS_HeatPusher_PushedPerSecond>
-	</value>
-	</Operation>
-	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/ThingDef/comps/li[@Class="CompProperties_HeatPusher" and heatPerSecond]/../../statBases</xpath>
-		<value>
-			<RWHS_HeatPusher_MinTemp>0</RWHS_HeatPusher_MinTemp>
-		</value>
-	</Operation>
-	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/ThingDef/comps/li[@Class="CompProperties_HeatPusher" and heatPerSecond]/../../statBases</xpath>
-		<value>
-			<RWHS_HeatPusher_MaxTemp>0</RWHS_HeatPusher_MaxTemp>
-		</value>
-	</Operation>
-	<!-- Steam generators -->
-	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/ThingDef/comps/li[compClass="CompPowerPlantSteam"]/../../statBases</xpath>
-		<value>
-			<RWHS_PowerPlantSteam_PushedPerSecond>0</RWHS_PowerPlantSteam_PushedPerSecond>
-		</value>
-	</Operation>
-	
-	<!-- Remove stats attributed to SOS2 buildings (Use "Save our ship 2 - Heat Statistics" to get their stats, they use custom logic) -->
-	<Operation Class="PatchOperationRemove">
-		<success>Always</success>
-		<xpath>/Defs/ThingDef/comps/li[@Class="CompProperties_ShipHeat" and ventHeatToSpace]/../../statBases/RWHS_TempControl_RoomExchange_MaxACPerSecond</xpath>
-	</Operation>
-	<Operation Class="PatchOperationRemove">
-		<success>Always</success>
-		<xpath>/Defs/ThingDef/comps/li[@Class="CompProperties_ShipHeat" and ventHeatToSpace]/../../statBases/RWHS_TempControl_RoomExchange_CurrentACPerSecond</xpath>
-	</Operation>
+  <!-- Add to Between Rooms Temp Control (COOLERS) -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[not(thingClass="Building_Heater")]/comps/li[@Class="CompProperties_TempControl"]/../../statBases</xpath>
+    <value>
+      <RWHS_TempControl_RoomExchange_CurrentACPerSecond>0</RWHS_TempControl_RoomExchange_CurrentACPerSecond>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[not(thingClass="Building_Heater")]/comps/li[@Class="CompProperties_TempControl"]/../../statBases</xpath>
+    <value>
+      <RWHS_TempControl_RoomExchange_MaxACPerSecond>0</RWHS_TempControl_RoomExchange_MaxACPerSecond>
+    </value>
+  </Operation>
+  <!-- Add to In-place Temp Control (HEATERS) -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[thingClass="Building_Heater"]/statBases</xpath>
+    <value>
+      <RWHS_TempControl_InPlace_CurrentACPerSecond>0</RWHS_TempControl_InPlace_CurrentACPerSecond>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[thingClass="Building_Heater"]/statBases</xpath>
+    <value>
+      <RWHS_TempControl_InPlace_MaxACPerSecond>0</RWHS_TempControl_InPlace_MaxACPerSecond>
+    </value>
+  </Operation>
+  <!-- Add to Heat Pushers (PASSIVE COOLER / CAMPFIRE) -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef/comps/li[@Class="CompProperties_HeatPusher" and heatPerSecond]/../../statBases</xpath>
+    <value>
+      <RWHS_HeatPusher_PushedPerSecond>0</RWHS_HeatPusher_PushedPerSecond>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef/comps/li[@Class="CompProperties_HeatPusher" and heatPerSecond]/../../statBases</xpath>
+    <value>
+      <RWHS_HeatPusher_MinTemp>0</RWHS_HeatPusher_MinTemp>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef/comps/li[@Class="CompProperties_HeatPusher" and heatPerSecond]/../../statBases</xpath>
+    <value>
+      <RWHS_HeatPusher_MaxTemp>0</RWHS_HeatPusher_MaxTemp>
+    </value>
+  </Operation>
+  <!-- Steam generators -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef/comps/li[compClass="CompPowerPlantSteam"]/../../statBases</xpath>
+    <value>
+      <RWHS_PowerPlantSteam_PushedPerSecond>0</RWHS_PowerPlantSteam_PushedPerSecond>
+    </value>
+  </Operation>
+  <!-- Remove stats attributed to SOS2 buildings (Use "Save our ship 2 - Heat Statistics" to get their stats, they use custom logic) -->
+  <Operation Class="PatchOperationRemove">
+    <success>Always</success>
+    <xpath>/Defs/ThingDef/comps/li[@Class="CompProperties_ShipHeat" and ventHeatToSpace]/../../statBases/RWHS_TempControl_RoomExchange_MaxACPerSecond</xpath>
+  </Operation>
+  <Operation Class="PatchOperationRemove">
+    <success>Always</success>
+    <xpath>/Defs/ThingDef/comps/li[@Class="CompProperties_ShipHeat" and ventHeatToSpace]/../../statBases/RWHS_TempControl_RoomExchange_CurrentACPerSecond</xpath>
+  </Operation>
 </Patch>

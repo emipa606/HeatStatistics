@@ -1,12 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>RimWorld - Heat statistics</name>
-	<author>Helldragger</author>
-	<packageId>helldragger.rimworldheatstatistics</packageId>
-	<supportedVersions>
+  <name>Heat statistics (Continued)</name>
+  <packageId>Mlie.HeatStatistics</packageId>
+  <author>Helldragger</author>
+  <url>https://github.com/emipa606/HeatStatistics</url>
+  <supportedVersions>
     <li>1.1</li>
     <li>1.2</li>
-	</supportedVersions>
-	<description>
+    <li>1.3</li>
+  </supportedVersions>
+  <modDependencies />
+  <loadAfter />
+  <description>[img]https://i.imgur.com/buuPQel.png[/img]
+Update of Helldraggers mod
+https://steamcommunity.com/sharedfiles/filedetails/?id=2165849348
+
+[img]https://i.imgur.com/pufA0kM.png[/img]
+
+[table]
+    [tr]
+        [td][url=https://invite.gg/Mlie][img]https://i.imgur.com/zdzzBrc.png[/img][/url][/td]
+        [td][url=https://github.com/emipa606/HeatStatistics][img]https://i.imgur.com/kTkpTOE.png[/img][/url][/td]
+    [/tr]
+[/table]
+	
+[img]https://i.imgur.com/Z4GOv8H.png[/img]
+This mod is currently unmaintained (I don't have time for modding anymore).
+[img]https://i.imgur.com/NVmGUtF.png[/img]
+
 Unsure how to set them up efficiently your megabase AC system to save electricity?
 Trying to create a deadly heat/cold trap and you need some maths?
 Or maybe you just like stats and dwelving deeper in the game internal systems?
@@ -14,22 +35,51 @@ Or maybe you just like stats and dwelving deeper in the game internal systems?
 Then this mod is for you, it adds various fully dynamic and explained statistics to RimWorld various heat sources and management buildings:
 
 - Heat pushers (Campfires / Passive coolers / Generators ...) and their modded derivatives now display how much they push in the room per second.
-Now you know how hot they will go once they store at least 1 unit of heat.
 
 - InPlace AC buildings (Heater), RoomExchange AC buildings (Cooler) and their modded derivatives now display their max and current amount of degree they can control in the room!
-Their various efficiency systems are now exposed for you to optimize your AC setup!
 
 - Geothermal power is now as useful as can be, you can now look how hot those can run and make use of their power to heat up your base safely!
 
-If you play with "Save our ship 2", check out "Save our ship 2 - Heat Statistics" to optimize your ship critical AC system!
-If you play with "Save our ship 2 - Extensions", this mods adds stats to the subzero cooler, the other mod cited above adds stats to the heatsinks.
+[img]https://i.imgur.com/wPkAx75.png[/img]
 
-The mod is under MIT licence aka. Do whatever you want with it! Credit is always appreciated though! :D
-The source can also be found on the following github: https://github.com/helldragger/RimWorld-HeatStatistics
-	</description>
-	<modDependencies>
-	</modDependencies>
-	<loadAfter>
-		<li>storm.sos2ex</li>
-	</loadAfter>
+This mod is be safe to be added / removed from saves.
+This mod should not have any conflicts with other mods.
+Incompatibility with a mod only means not every building have those dynamic stats.
+
+[img]https://i.imgur.com/zvJGxIS.png[/img]
+
+[list]
+ [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2013476665]Utility column[/url]
+ [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2125698178]Save our ship 2 - Extensions[/url] (Partial, check out [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2164286498]Save our ship 2 - Heat Statistics[/url] for full compatibility and [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1909914131]Save our ship 2[/url] support)
+ [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1874344070]Coal Expanded[/url]
+ [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2052918119]Vanilla Factions Expanded - Settlers[/url]
+ [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1718190143]Vanilla Furniture Expanded[/url]
+ [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2062943477]Vanilla Furniture Expanded - Power[/url]
+ [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1798787901]Tier 2 Temperature[/url]
+ [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1372003680]Replace Stuff[/url] (Over-wall cooler)
+ [*] Maybe more, tell me if you come across unsupported buildings to add it here as not compatible yet
+[/list]
+
+[img]https://i.imgur.com/OVxG7nF.png[/img]
+
+[list]
+ [*] Geothermal generators can be in multiple rooms at once (it counts as a wall), hence the actual current output cannot be calculated, the geyser state is also private, further preventing dynamic output calculation. 
+ [*] Vents equalize temperature between rooms with different values for each room so same problem as the geothermal generator: there is no easily exposable / understandable way to display all those values at the moment. It would require a specialized visualization and I'm not nearly fluent enough in rimworld modding or c# to do this in the foreseable future yet.
+ [*] Temperature equalization is not in the scope of this mod (yet, see previous point), so insulation mods / vents and the likes currently won't have those dynamic stats (would be pretty cool though)
+[/list]
+
+[img]https://i.imgur.com/DlW4qgM.png[/img]
+
+License: MIT licence ( Do whatever you want with it, I just ask for due credit )
+Github: https://github.com/helldragger/RimWorld-HeatStatistics
+
+[img]https://i.imgur.com/PwoNOj4.png[/img]
+[list]
+[*] See if the the error persists if you just have this mod and its requirements active.
+[*] If not, try adding your other mods until it happens again.
+[*] Post your error-log using [url=https://steamcommunity.com/workshop/filedetails/?id=818773962]HugsLib[/url] and command Ctrl+F12
+[*] For best support, please use the Discord-channel for error-reporting.
+[*] Do not report errors by making a discussion-thread, I get no notification of that.
+[*] If you have the solution for a problem, please post it to the GitHub repository.
+[/list]</description>
 </ModMetaData>
