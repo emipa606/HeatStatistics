@@ -29,12 +29,7 @@ public class StatWorker_TempControl_RoomExchange_CurrentACPerSecond : StatWorker
             return false;
         }
 
-        if (!req.HasThing)
-        {
-            return false;
-        }
-
-        return IsConcernedThing(req.Thing);
+        return req.HasThing && IsConcernedThing(req.Thing);
     }
 
     public override float GetValueUnfinalized(StatRequest req, bool applyPostProcess = true)
@@ -69,29 +64,17 @@ public class StatWorker_TempControl_RoomExchange_CurrentACPerSecond : StatWorker
         var maxACPerSecond =
             RWHS_TempControl_RoomExchange.GetMaxACPerSecond(req); // max cooling power possible            
         var isHeater = tempControl.Props.energyPerSecond > 0;
-        float actualAC;
-        if (isHeater)
-        {
-            actualAC = Mathf.Max(Mathf.Min(targetTempDiff, maxACPerSecond), 0);
-        }
-        else
-        {
-            actualAC = Mathf.Min(Mathf.Max(targetTempDiff, maxACPerSecond), 0);
-        }
+        var actualAC = isHeater
+            ? Mathf.Max(Mathf.Min(targetTempDiff, maxACPerSecond), 0)
+            : Mathf.Min(Mathf.Max(targetTempDiff, maxACPerSecond), 0);
 
         var seb = new SEB("StatsReport_RWHS");
         seb.Simple("CooledRoomTemp", cooledRoomTemp);
         seb.Simple("TargetTemperature", targetTemp);
         seb.Full("TargetTempDiff", targetTempDiff, targetTemp, cooledRoomTemp);
         seb.Simple("MaxACPerSecond", maxACPerSecond);
-        if (isHeater)
-        {
-            seb.Full("ActualHeaterACPerSecond", actualAC, targetTempDiff, maxACPerSecond);
-        }
-        else
-        {
-            seb.Full("ActualCoolerACPerSecond", actualAC, targetTempDiff, maxACPerSecond);
-        }
+        seb.Full(isHeater ? "ActualHeaterACPerSecond" : "ActualCoolerACPerSecond", actualAC, targetTempDiff,
+            maxACPerSecond);
 
         return seb.ToString();
     }

@@ -28,12 +28,7 @@ public class StatWorker_TempControl_RoomExchange_MaxACPerSecond : StatWorker
             return false;
         }
 
-        if (!req.HasThing)
-        {
-            return false;
-        }
-
-        return IsConcernedThing(req.Thing);
+        return req.HasThing && IsConcernedThing(req.Thing);
     }
 
     public override float GetValueUnfinalized(StatRequest req, bool applyPostProcess = true)

@@ -79,3 +79,4 @@ Github: https://github.com/helldragger/RimWorld-HeatStatistics
 -  If you have the solution for a problem, please post it to the GitHub repository.
 
 
+

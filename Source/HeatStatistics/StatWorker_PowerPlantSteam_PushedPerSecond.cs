@@ -28,12 +28,7 @@ public class StatWorker_PowerPlantSteam_PushedPerSecond : StatWorker
             return false;
         }
 
-        if (!req.HasThing)
-        {
-            return false;
-        }
-
-        return IsConcernedThing(req.Thing);
+        return req.HasThing && IsConcernedThing(req.Thing);
     }
 
     public override float GetValueUnfinalized(StatRequest req, bool applyPostProcess = true)

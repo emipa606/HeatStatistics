@@ -22,12 +22,9 @@ public static class RWHS_TempControl_InPlace
         var targetTempDiff = targetTemp - roomTemp;
         var maxACPerSecond = GetMaxACPerSecond(req); // max cooling power possible
         var isHeater = tempControl.Props.energyPerSecond > 0;
-        if (isHeater)
-        {
-            return Mathf.Max(Mathf.Min(targetTempDiff, maxACPerSecond), 0);
-        }
-
-        return Mathf.Min(Mathf.Max(targetTempDiff, maxACPerSecond), 0);
+        return isHeater
+            ? Mathf.Max(Mathf.Min(targetTempDiff, maxACPerSecond), 0)
+            : Mathf.Min(Mathf.Max(targetTempDiff, maxACPerSecond), 0);
     }
 
     public static float GetMaxACPerSecond(StatRequest req, bool applyPostProcess = true)

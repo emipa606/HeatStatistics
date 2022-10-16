@@ -1,4 +1,9 @@
 # Changelog for HeatStatistics
 
+1.4.1 - Mod updated for 1.4 and passed autotests..
+Used DeepL to update translations for ChineseSimplified, French, German, Russian 
+Remaining characters: 485339
+
+
 1.3.1 - Updated to 1.3
 
