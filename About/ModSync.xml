@@ -2,7 +2,7 @@
 <ModSyncNinjaData>
   <ID>17df4867-94fa-44fe-986c-ee4c9f5362b9</ID>
   <ModName>Heat statistics (Continued)</ModName>
-  <Version>1.4.2</Version>
+  <Version>1.4.3</Version>
   <SaveBreaking>False</SaveBreaking>
   <Host name="Github">
     <Owner>emipa606</Owner>

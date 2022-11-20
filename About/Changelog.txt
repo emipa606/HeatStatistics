@@ -1,5 +1,8 @@
 # Changelog for HeatStatistics
 
+1.4.3 - Removal of old dll
+
+
 1.4.2 - Recompile for the latest rimworld-patchversion
 
 
