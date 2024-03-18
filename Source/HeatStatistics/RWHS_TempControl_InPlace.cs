@@ -7,7 +7,7 @@ namespace RWHS;
  *
  * Second step of this mod: adding this
  * Displaying this information
-*/
+ */
 
 [StaticConstructorOnStartup]
 public static class RWHS_TempControl_InPlace
