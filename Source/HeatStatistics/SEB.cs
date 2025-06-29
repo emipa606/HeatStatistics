@@ -3,39 +3,32 @@ using Verse;
 
 namespace RWHS;
 
-public class SEB
+public class SEB(string prefix = "", string node = "")
 {
-    private readonly StringBuilder builder = new StringBuilder();
-    public string node;
-    public string prefix;
+    private readonly StringBuilder builder = new();
+    private string node = node;
 
-    public SEB(string prefix = "", string node = "")
+
+    private SEB Node(string s)
     {
-        this.prefix = prefix;
-        this.node = node;
-    }
-
-
-    public SEB Node(string node)
-    {
-        this.node = node;
-        builder.AppendLine($"{prefix}_{node}".Translate());
+        node = s;
+        builder.AppendLine($"{prefix}_{s}".Translate());
         return this;
     }
 
-    public SEB Equation()
+    private SEB equation()
     {
         builder.AppendLine($"  (= {$"{prefix}_Equation_{node}".Translate()} )");
         return this;
     }
 
-    public SEB Calculus(params object[] equationValues)
+    private SEB calculus(params object[] equationValues)
     {
         builder.AppendLine($"  (= {$"{prefix}_Calculus_{node}".Translate(equationValues)} )");
         return this;
     }
 
-    public SEB Value(float value)
+    private SEB Value(float value)
     {
         builder.AppendLine($"  {$"{prefix}_Unit_{node}".Translate(value)}");
         return this;
@@ -62,8 +55,8 @@ public class SEB
     public SEB Full(string node, float value, params object[] equationValues)
     {
         return Node(node)
-            .Equation()
-            .Calculus(equationValues)
+            .equation()
+            .calculus(equationValues)
             .Value(value);
     }
 

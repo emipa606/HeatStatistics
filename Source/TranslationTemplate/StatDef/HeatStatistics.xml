@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Max working temperature -->
+  <RWHS_HeatPusher_MaxTemp.label>Max working temperature</RWHS_HeatPusher_MaxTemp.label>
+  <!-- EN: The maximum temperature needed for the building to work. -->
+  <RWHS_HeatPusher_MaxTemp.description>The maximum temperature needed for the building to work.</RWHS_HeatPusher_MaxTemp.description>
+  <!-- EN: Min working temperature -->
+  <RWHS_HeatPusher_MinTemp.label>Min working temperature</RWHS_HeatPusher_MinTemp.label>
+  <!-- EN: The minimum temperature needed for the building to work. -->
+  <RWHS_HeatPusher_MinTemp.description>The minimum temperature needed for the building to work.</RWHS_HeatPusher_MinTemp.description>
+  <!-- EN: Heat pushed when active -->
+  <RWHS_HeatPusher_PushedPerSecond.label>Heat pushed when active</RWHS_HeatPusher_PushedPerSecond.label>
+  <!-- EN: The current amount of degrees this building will push into the room per second when active.\n\nA heat pusher will be active when the ambient temp is between it's min and max working temperature. -->
+  <RWHS_HeatPusher_PushedPerSecond.description>The current amount of degrees this building will push into the room per second when active.
+
+A heat pusher will be active when the ambient temp is between it's min and max working temperature.</RWHS_HeatPusher_PushedPerSecond.description>
+  <!-- EN: Max heat pushed per second -->
+  <RWHS_PowerPlantSteam_PushedPerSecond.label>Max heat pushed per second</RWHS_PowerPlantSteam_PushedPerSecond.label>
+  <!-- EN: The current amount of degrees this building will push into the room per second during a geyser spray.\n\nThis statistic is the maximum a generator can output during consecutive long sprays. -->
+  <RWHS_PowerPlantSteam_PushedPerSecond.description>The current amount of degrees this building will push into the room per second during a geyser spray.
+
+This statistic is the maximum a generator can output during consecutive long sprays.</RWHS_PowerPlantSteam_PushedPerSecond.description>
+  <!-- EN: Current temp control per second -->
+  <RWHS_TempControl_InPlace_CurrentACPerSecond.label>Current temp control per second</RWHS_TempControl_InPlace_CurrentACPerSecond.label>
+  <!-- EN: The amount of degrees this building is controlling in the room per second. -->
+  <RWHS_TempControl_InPlace_CurrentACPerSecond.description>The amount of degrees this building is controlling in the room per second.</RWHS_TempControl_InPlace_CurrentACPerSecond.description>
+  <!-- EN: Max temp control per second -->
+  <RWHS_TempControl_InPlace_MaxACPerSecond.label>Max temp control per second</RWHS_TempControl_InPlace_MaxACPerSecond.label>
+  <!-- EN: The maximum amount of degrees this building can control in the room per second. -->
+  <RWHS_TempControl_InPlace_MaxACPerSecond.description>The maximum amount of degrees this building can control in the room per second.</RWHS_TempControl_InPlace_MaxACPerSecond.description>
+  <!-- EN: Current cooling per second -->
+  <RWHS_TempControl_RoomExchange_CurrentACPerSecond.label>Current cooling per second</RWHS_TempControl_RoomExchange_CurrentACPerSecond.label>
+  <!-- EN: The amount of degrees this building is controlling from the room on its cold side per second. -->
+  <RWHS_TempControl_RoomExchange_CurrentACPerSecond.description>The amount of degrees this building is controlling from the room on its cold side per second.</RWHS_TempControl_RoomExchange_CurrentACPerSecond.description>
+  <!-- EN: Max cooling per second -->
+  <RWHS_TempControl_RoomExchange_MaxACPerSecond.label>Max cooling per second</RWHS_TempControl_RoomExchange_MaxACPerSecond.label>
+  <!-- EN: The maximum amount of degrees this building can control from the room on its cold side per second. -->
+  <RWHS_TempControl_RoomExchange_MaxACPerSecond.description>The maximum amount of degrees this building can control from the room on its cold side per second.</RWHS_TempControl_RoomExchange_MaxACPerSecond.description>
+</LanguageData>

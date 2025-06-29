@@ -7,7 +7,7 @@ namespace RWHS;
 
 public class StatWorker_TempControl_InPlace_MaxACPerSecond : StatWorker
 {
-    private bool IsConcernedThing(Thing thing)
+    private static bool isConcernedThing(Thing thing)
     {
         return thing.TryGetComp<CompTempControl>() != null;
     }
@@ -16,7 +16,7 @@ public class StatWorker_TempControl_InPlace_MaxACPerSecond : StatWorker
     {
         if (!base.IsDisabledFor(thing))
         {
-            return !IsConcernedThing(thing);
+            return !isConcernedThing(thing);
         }
 
         return true;
@@ -29,14 +29,14 @@ public class StatWorker_TempControl_InPlace_MaxACPerSecond : StatWorker
             return false;
         }
 
-        return req.HasThing && IsConcernedThing(req.Thing);
+        return req.HasThing && isConcernedThing(req.Thing);
     }
 
     public override float GetValueUnfinalized(StatRequest req, bool applyPostProcess = true)
     {
         if (req.Thing != null)
         {
-            return RWHS_TempControl_InPlace.GetMaxACPerSecond(req, applyPostProcess);
+            return RWHS_TempControl_InPlace.GetMaxAcPerSecond(req, applyPostProcess);
         }
 
         Log.Error(
@@ -59,11 +59,11 @@ public class StatWorker_TempControl_InPlace_MaxACPerSecond : StatWorker
         var roomTemp = tempController.Position.GetTemperature(tempController.Map);
         var energyPerSecond = tempControl.Props.energyPerSecond; // the power of the radiator
         float roomSurface = tempController.Position.GetRoom(tempController.Map).CellCount;
-        var coolingConversionRate = 4.16666651f; // Celsius cooled per Joules*Second*Meter^2  conversion rate
-        float minTemp = 20;
-        float maxTemp = 120;
+        const float coolingConversionRate = 4.16666651f; // Celsius cooled per Joules*Second*Meter^2  conversion rate
+        const float minTemp = 20;
+        const float maxTemp = 120;
         var efficiency = 1 - Mathf.Min(Mathf.Max((roomTemp - minTemp) / (maxTemp - minTemp), 0), 1);
-        var maxACPerSecond =
+        var maxAcPerSecond =
             energyPerSecond * efficiency / roomSurface * coolingConversionRate; // max cooling power possible
 
         var seb = new SEB("StatsReport_RWHS");
@@ -72,7 +72,7 @@ public class StatWorker_TempControl_InPlace_MaxACPerSecond : StatWorker
         seb.Simple("RoomSurface", roomSurface);
         seb.Simple("ACConversionRate", coolingConversionRate);
         seb.Full("LerpEfficiency", efficiency * 100, roomTemp, minTemp, maxTemp);
-        seb.Full("MaxACPerSecond", maxACPerSecond, energyPerSecond, efficiency, roomSurface, coolingConversionRate);
+        seb.Full("MaxACPerSecond", maxAcPerSecond, energyPerSecond, efficiency, roomSurface, coolingConversionRate);
 
         return seb.ToString();
     }

@@ -7,7 +7,7 @@ namespace RWHS;
 
 public class StatWorker_TempControl_RoomExchange_CurrentACPerSecond : StatWorker
 {
-    private bool IsConcernedThing(Thing thing)
+    private static bool isConcernedThing(Thing thing)
     {
         return thing.TryGetComp<CompTempControl>() != null;
     }
@@ -16,7 +16,7 @@ public class StatWorker_TempControl_RoomExchange_CurrentACPerSecond : StatWorker
     {
         if (!base.IsDisabledFor(thing))
         {
-            return !IsConcernedThing(thing);
+            return !isConcernedThing(thing);
         }
 
         return true;
@@ -29,14 +29,14 @@ public class StatWorker_TempControl_RoomExchange_CurrentACPerSecond : StatWorker
             return false;
         }
 
-        return req.HasThing && IsConcernedThing(req.Thing);
+        return req.HasThing && isConcernedThing(req.Thing);
     }
 
     public override float GetValueUnfinalized(StatRequest req, bool applyPostProcess = true)
     {
         if (req.Thing != null)
         {
-            return RWHS_TempControl_RoomExchange.GetCurrentACPerSecond(req, applyPostProcess);
+            return RWHS_TempControl_RoomExchange.GetCurrentAcPerSecond(req, applyPostProcess);
         }
 
         Log.Error(
@@ -56,25 +56,25 @@ public class StatWorker_TempControl_RoomExchange_CurrentACPerSecond : StatWorker
         var tempControl = req.Thing.TryGetComp<CompTempControl>();
         var tempController = req.Thing;
 
-        var intVec3_1 = tempController.Position + IntVec3.South.RotatedBy(tempController.Rotation);
+        var intVec31 = tempController.Position + IntVec3.South.RotatedBy(tempController.Rotation);
 
-        var cooledRoomTemp = intVec3_1.GetTemperature(tempController.Map);
+        var cooledRoomTemp = intVec31.GetTemperature(tempController.Map);
         var targetTemp = tempControl.targetTemperature;
         var targetTempDiff = targetTemp - cooledRoomTemp;
-        var maxACPerSecond =
-            RWHS_TempControl_RoomExchange.GetMaxACPerSecond(req); // max cooling power possible            
+        var maxAcPerSecond =
+            RWHS_TempControl_RoomExchange.GetMaxAcPerSecond(req); // max cooling power possible            
         var isHeater = tempControl.Props.energyPerSecond > 0;
-        var actualAC = isHeater
-            ? Mathf.Max(Mathf.Min(targetTempDiff, maxACPerSecond), 0)
-            : Mathf.Min(Mathf.Max(targetTempDiff, maxACPerSecond), 0);
+        var actualAc = isHeater
+            ? Mathf.Max(Mathf.Min(targetTempDiff, maxAcPerSecond), 0)
+            : Mathf.Min(Mathf.Max(targetTempDiff, maxAcPerSecond), 0);
 
         var seb = new SEB("StatsReport_RWHS");
         seb.Simple("CooledRoomTemp", cooledRoomTemp);
         seb.Simple("TargetTemperature", targetTemp);
         seb.Full("TargetTempDiff", targetTempDiff, targetTemp, cooledRoomTemp);
-        seb.Simple("MaxACPerSecond", maxACPerSecond);
-        seb.Full(isHeater ? "ActualHeaterACPerSecond" : "ActualCoolerACPerSecond", actualAC, targetTempDiff,
-            maxACPerSecond);
+        seb.Simple("MaxACPerSecond", maxAcPerSecond);
+        seb.Full(isHeater ? "ActualHeaterACPerSecond" : "ActualCoolerACPerSecond", actualAc, targetTempDiff,
+            maxAcPerSecond);
 
         return seb.ToString();
     }

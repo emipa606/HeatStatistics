@@ -20,14 +20,14 @@ public static class RWHS_TempControl_InPlace
         var roomTemp = tempController.Position.GetTemperature(tempController.Map);
         var targetTemp = tempControl.targetTemperature;
         var targetTempDiff = targetTemp - roomTemp;
-        var maxACPerSecond = GetMaxACPerSecond(req); // max cooling power possible
+        var maxACPerSecond = GetMaxAcPerSecond(req); // max cooling power possible
         var isHeater = tempControl.Props.energyPerSecond > 0;
         return isHeater
             ? Mathf.Max(Mathf.Min(targetTempDiff, maxACPerSecond), 0)
             : Mathf.Min(Mathf.Max(targetTempDiff, maxACPerSecond), 0);
     }
 
-    public static float GetMaxACPerSecond(StatRequest req, bool applyPostProcess = true)
+    public static float GetMaxAcPerSecond(StatRequest req, bool applyPostProcess = true)
     {
         var tempControl = req.Thing.TryGetComp<CompTempControl>();
         var tempController = req.Thing;

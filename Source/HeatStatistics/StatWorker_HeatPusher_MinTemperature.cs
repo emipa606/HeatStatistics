@@ -6,7 +6,7 @@ namespace RWHS;
 
 public class StatWorker_HeatPusher_MinTemperature : StatWorker
 {
-    private bool IsConcernedThing(Thing thing)
+    private static bool isConcernedThing(Thing thing)
     {
         return !(thing.TryGetComp<CompHeatPusher>() == null && thing.TryGetComp<CompHeatPusherPowered>() == null);
     }
@@ -15,7 +15,7 @@ public class StatWorker_HeatPusher_MinTemperature : StatWorker
     {
         if (!base.IsDisabledFor(thing))
         {
-            return !IsConcernedThing(thing);
+            return !isConcernedThing(thing);
         }
 
         return true;
@@ -28,7 +28,7 @@ public class StatWorker_HeatPusher_MinTemperature : StatWorker
             return false;
         }
 
-        return req.HasThing && IsConcernedThing(req.Thing);
+        return req.HasThing && isConcernedThing(req.Thing);
     }
 
     public override float GetValueUnfinalized(StatRequest req, bool applyPostProcess = true)

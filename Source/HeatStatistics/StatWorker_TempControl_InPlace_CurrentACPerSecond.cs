@@ -7,7 +7,7 @@ namespace RWHS;
 
 public class StatWorker_TempControl_InPlace_CurrentACPerSecond : StatWorker
 {
-    private bool IsConcernedThing(Thing thing)
+    private static bool isConcernedThing(Thing thing)
     {
         return thing.TryGetComp<CompTempControl>() != null;
     }
@@ -16,7 +16,7 @@ public class StatWorker_TempControl_InPlace_CurrentACPerSecond : StatWorker
     {
         if (!base.IsDisabledFor(thing))
         {
-            return !IsConcernedThing(thing);
+            return !isConcernedThing(thing);
         }
 
         return true;
@@ -29,7 +29,7 @@ public class StatWorker_TempControl_InPlace_CurrentACPerSecond : StatWorker
             return false;
         }
 
-        return req.HasThing && IsConcernedThing(req.Thing);
+        return req.HasThing && isConcernedThing(req.Thing);
     }
 
     public override float GetValueUnfinalized(StatRequest req, bool applyPostProcess = true)
@@ -59,19 +59,19 @@ public class StatWorker_TempControl_InPlace_CurrentACPerSecond : StatWorker
         var roomTemp = tempController.Position.GetTemperature(tempController.Map);
         var targetTemp = tempControl.targetTemperature;
         var targetTempDiff = targetTemp - roomTemp;
-        var maxACPerSecond = RWHS_TempControl_InPlace.GetMaxACPerSecond(req); // max cooling power possible
+        var maxAcPerSecond = RWHS_TempControl_InPlace.GetMaxAcPerSecond(req); // max cooling power possible
         var isHeater = tempControl.Props.energyPerSecond > 0;
-        var actualAC = isHeater
-            ? Mathf.Max(Mathf.Min(targetTempDiff, maxACPerSecond), 0)
-            : Mathf.Min(Mathf.Max(targetTempDiff, maxACPerSecond), 0);
+        var actualAc = isHeater
+            ? Mathf.Max(Mathf.Min(targetTempDiff, maxAcPerSecond), 0)
+            : Mathf.Min(Mathf.Max(targetTempDiff, maxAcPerSecond), 0);
 
         var seb = new SEB("StatsReport_RWHS");
         seb.Simple("AmbientRoomTemp", roomTemp);
         seb.Simple("TargetTemperature", targetTemp);
         seb.Full("TargetTempDiff", targetTempDiff, targetTemp, roomTemp);
-        seb.Simple("MaxACPerSecond", maxACPerSecond);
-        seb.Full(isHeater ? "ActualHeaterACPerSecond" : "ActualCoolerACPerSecond", actualAC, targetTempDiff,
-            maxACPerSecond);
+        seb.Simple("MaxACPerSecond", maxAcPerSecond);
+        seb.Full(isHeater ? "ActualHeaterACPerSecond" : "ActualCoolerACPerSecond", actualAc, targetTempDiff,
+            maxAcPerSecond);
 
         return seb.ToString();
     }
