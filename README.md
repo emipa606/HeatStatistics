@@ -1,16 +1,16 @@
 # [Heat statistics (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=2803766534)
 
-![Image](https://i.imgur.com/buuPQel.png)
+![Image](https://img.litet.net/logos/Info.png)
 
 Update of Helldraggers mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=2165849348
 
-![Image](https://i.imgur.com/pufA0kM.png)
+![Image](https://img.litet.net/logos/Notice.png)
 	
-![Image](https://i.imgur.com/Z4GOv8H.png)
+![Image](https://img.litet.net/logos/OriginalDescription.png)
 
 This mod is currently unmaintained (I don't have time for modding anymore).
-![Image](https://i.imgur.com/NVmGUtF.png)
+![Image](https://img.litet.net/NVmGUtF.png)
 
 Unsure how to set them up efficiently your megabase AC system to save electricity?
 Trying to create a deadly heat/cold trap and you need some maths?
@@ -24,13 +24,13 @@ Then this mod is for you, it adds various fully dynamic and explained statistics
 
 - Geothermal power is now as useful as can be, you can now look how hot those can run and make use of their power to heat up your base safely!
 
-![Image](https://i.imgur.com/wPkAx75.png)
+![Image](https://img.litet.net/wPkAx75.png)
 
 This mod is be safe to be added / removed from saves.
 This mod should not have any conflicts with other mods.
 Incompatibility with a mod only means not every building have those dynamic stats.
 
-![Image](https://i.imgur.com/zvJGxIS.png)
+![Image](https://img.litet.net/zvJGxIS.png)
 
 
 
@@ -46,7 +46,7 @@ Incompatibility with a mod only means not every building have those dynamic stat
 
 
 
-![Image](https://i.imgur.com/OVxG7nF.png)
+![Image](https://img.litet.net/OVxG7nF.png)
 
 
 
@@ -56,18 +56,18 @@ Incompatibility with a mod only means not every building have those dynamic stat
 
 
 
-![Image](https://i.imgur.com/DlW4qgM.png)
+![Image](https://img.litet.net/DlW4qgM.png)
 
 License: MIT licence ( Do whatever you want with it, I just ask for due credit )
 Github: https://github.com/helldragger/RimWorld-HeatStatistics
 
-![Image](https://i.imgur.com/PwoNOj4.png)
+![Image](https://img.litet.net/logos/ReportingIssues.png)
 
 
 
 -  See if the the error persists if you just have this mod and its requirements active.
 -  If not, try adding your other mods until it happens again.
--  Post your error-log using [HugsLib](https://steamcommunity.com/workshop/filedetails/?id=818773962) or the standalone [Uploader](https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404) and command Ctrl+F12
+-  Always post your log using the [Log Uploader](https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404)
 -  For best support, please use the Discord-channel for error-reporting.
 -  Do not report errors by making a discussion-thread, I get no notification of that.
 -  If you have the solution for a problem, please post it to the GitHub repository.
@@ -75,4 +75,4 @@ Github: https://github.com/helldragger/RimWorld-HeatStatistics
 
  
 
-[![Image](https://img.shields.io/github/v/release/emipa606/HeatStatistics?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/2803766534) | tags:  efficiency
+[![Image](https://img.shields.io/github/v/release/emipa606/HeatStatistics?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/2803766534) | efficiency

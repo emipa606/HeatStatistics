@@ -50,7 +50,7 @@ public class StatWorker_PowerPlantSteam_PushedPerSecond : StatWorker
         var roomGroup = req.Thing.Position.GetRoom(req.Thing.Map);
         if (roomGroup != null)
         {
-            surface = roomGroup.CellCount; // TODO DEBUG THIS LINE
+            surface = roomGroup.CellCount;
         }
 
         var heatPushedPerSecond = heatPerSecond / surface;

@@ -3,4 +3,22 @@
     <BuildType Name="Release" />
   </Configurations>
   <Project Path="HeatStatistics/HeatStatistics.csproj" />
+  <Folder Name="/.github/">
+    <File Path="../.github/copilot-instructions.md" />
+  </Folder>
+  <Folder Name="/XML/Defs/StatDef/">
+    <File Path="../Defs/StatDef/HeatStatistics.xml" />
+  </Folder>
+  <Folder Name="/XML/About/">
+    <File Path="../About/about.xml" />
+  </Folder>
+  <Folder Name="/XML/Defs/Stats/">
+    <File Path="../Defs/Stats/StatCategories.xml" />
+  </Folder>
+  <Folder Name="/XML/Patches/">
+    <File Path="../Patches/AddPlaceholderForDynamicStats.xml" />
+  </Folder>
+  <Folder Name="/XML/Languages/English/Keyed/">
+    <File Path="../Languages/English/Keyed/RWHS_Keys.xml" />
+  </Folder>
 </Solution>

@@ -11,29 +11,30 @@
     <li>1.4</li>
     <li>1.5</li>
     <li>1.6</li>
+    <li>1.7</li>
   </supportedVersions>
   <modDependencies />
   <loadAfter />
-  <description>[img]https://i.imgur.com/buuPQel.png[/img]
+  <description>[img]https://img.litet.net/logos/Info.png[/img]
 Update of Helldraggers mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=2165849348
 
-[img]https://i.imgur.com/pufA0kM.png[/img]
+[img]https://img.litet.net/logos/Notice.png[/img]
 
 [table]
     [tr]
-        [td][url=https://dsc.gg/mlie][img]https://i.imgur.com/zdzzBrc.png[/img][/url][/td]
-        [td][url=https://github.com/emipa606/HeatStatistics][img]https://i.imgur.com/kTkpTOE.png[/img][/url][/td]
+        [td][url=https://discord.gg/h5TY6DA][img]https://img.litet.net/logos/Discord.png[/img][/url][/td]
+        [td][url=https://github.com/emipa606/HeatStatistics][img]https://img.litet.net/logos/Github.png[/img][/url][/td]
     [/tr]
     [tr]
-        [td][img]https://i.imgur.com/WjDSfUn.png[/img][/td]
-        [td][img]https://i.imgur.com/h5VwTNL.png[/img][/td]
+        [td][img]https://img.litet.net/logos/SafeToAdd.png[/img][/td]
+        [td][img]https://img.litet.net/logos/SafeToRemove.png[/img][/td]
     [/tr]
 [/table]
 	
-[img]https://i.imgur.com/Z4GOv8H.png[/img]
+[img]https://img.litet.net/logos/OriginalDescription.png[/img]
 This mod is currently unmaintained (I don't have time for modding anymore).
-[img]https://i.imgur.com/NVmGUtF.png[/img]
+[img]https://img.litet.net/NVmGUtF.png[/img]
 
 Unsure how to set them up efficiently your megabase AC system to save electricity?
 Trying to create a deadly heat/cold trap and you need some maths?
@@ -47,13 +48,13 @@ Then this mod is for you, it adds various fully dynamic and explained statistics
 
 - Geothermal power is now as useful as can be, you can now look how hot those can run and make use of their power to heat up your base safely!
 
-[img]https://i.imgur.com/wPkAx75.png[/img]
+[img]https://img.litet.net/wPkAx75.png[/img]
 
 This mod is be safe to be added / removed from saves.
 This mod should not have any conflicts with other mods.
 Incompatibility with a mod only means not every building have those dynamic stats.
 
-[img]https://i.imgur.com/zvJGxIS.png[/img]
+[img]https://img.litet.net/zvJGxIS.png[/img]
 
 [list]
  [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2013476665]Utility column[/url]
@@ -67,7 +68,7 @@ Incompatibility with a mod only means not every building have those dynamic stat
  [*] Maybe more, tell me if you come across unsupported buildings to add it here as not compatible yet
 [/list]
 
-[img]https://i.imgur.com/OVxG7nF.png[/img]
+[img]https://img.litet.net/OVxG7nF.png[/img]
 
 [list]
  [*] Geothermal generators can be in multiple rooms at once (it counts as a wall), hence the actual current output cannot be calculated, the geyser state is also private, further preventing dynamic output calculation. 
@@ -75,22 +76,22 @@ Incompatibility with a mod only means not every building have those dynamic stat
  [*] Temperature equalization is not in the scope of this mod (yet, see previous point), so insulation mods / vents and the likes currently won't have those dynamic stats (would be pretty cool though)
 [/list]
 
-[img]https://i.imgur.com/DlW4qgM.png[/img]
+[img]https://img.litet.net/DlW4qgM.png[/img]
 
 License: MIT licence ( Do whatever you want with it, I just ask for due credit )
 Github: https://github.com/helldragger/RimWorld-HeatStatistics
 
-[img]https://i.imgur.com/PwoNOj4.png[/img]
+[img]https://img.litet.net/logos/ReportingIssues.png[/img]
 [list]
 [*] See if the the error persists if you just have this mod and its requirements active.
 [*] If not, try adding your other mods until it happens again.
-[*] Post your error-log using [url=https://steamcommunity.com/workshop/filedetails/?id=818773962]HugsLib[/url] or the standalone [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404]Uploader[/url] and command Ctrl+F12
+[*] Always post your log using the [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404]Log Uploader[/url]
 [*] For best support, please use the Discord-channel for error-reporting.
 [*] Do not report errors by making a discussion-thread, I get no notification of that.
 [*] If you have the solution for a problem, please post it to the GitHub repository.
 [*] Use [url=https://github.com/RimSort/RimSort/releases/latest]RimSort[/url] to sort your mods
 [/list] 
 
-[url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2803766534][img]https://img.shields.io/github/v/release/emipa606/HeatStatistics?label=latest%20version&amp;style=plastic&amp;color=9f1111&amp;labelColor=black[/img][/url] | tags:  efficiency</description>
-  <modVersion IgnoreIfNoMatchingField="True">1.6.0</modVersion>
+[url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2803766534][img]https://img.shields.io/github/v/release/emipa606/HeatStatistics?label=latest%20version&amp;style=plastic&amp;color=9f1111&amp;labelColor=black[/img][/url] | efficiency</description>
+  <modVersion IgnoreIfNoMatchingField="True">1.7.0</modVersion>
 </ModMetaData>

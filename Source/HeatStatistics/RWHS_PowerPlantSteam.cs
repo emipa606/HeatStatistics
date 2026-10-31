@@ -17,7 +17,7 @@ public static class RWHS_PowerPlantSteam
         var roomGroup = req.Thing?.Position.GetRoom(req.Thing.Map);
         if (roomGroup != null)
         {
-            surface = roomGroup.CellCount; // TODO DEBUG THIS LINE
+            surface = roomGroup.CellCount;
         }
 
         var heatPushedPerSecond = heatPerSecond / surface;
@@ -30,8 +30,6 @@ public static class RWHS_PowerPlantSteam
         // here we take the worst case: continuous long sprays
         // with this we calculate the amount of time between those sprays we are spraying
         // we then calculate the chance of having heat pushed on those ticks between.
-        //float minIntervalBetweenSprays = 500;
-        //float maxSprayTicks = 500;
 
         float heatPushDelay = 20;
         float heatPerPush = 40;
